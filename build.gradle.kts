@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") apply false
+    id("com.google.cloud.tools.jib") version "3.3.2"
 }
 
 allprojects {
