@@ -2,15 +2,19 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") apply false
-    id("com.google.cloud.tools.jib") version "3.3.2"
+    kotlin("kapt") apply false
+    id("org.jlleitschuh.gradle.ktlint") apply false
+    id("com.google.cloud.tools.jib")
 }
 
 allprojects {
     group = "org.cookbook"
     version = "1.0-SNAPSHOT"
 
-    apply{
+    apply {
         plugin("kotlin")
+        plugin("kotlin-kapt")
+        plugin("org.jlleitschuh.gradle.ktlint")
     }
 
     repositories {
