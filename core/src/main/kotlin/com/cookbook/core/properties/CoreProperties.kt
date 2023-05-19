@@ -1,4 +1,4 @@
-package com.cookbook.core
+package com.cookbook.core.properties
 
 import org.springframework.boot.context.properties.ConfigurationProperties
 
