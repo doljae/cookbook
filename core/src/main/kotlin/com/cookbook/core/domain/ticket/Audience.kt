@@ -5,4 +5,7 @@ class Audience(
 ) {
     fun getBag(): Bag = bag
     fun setTicket(): Bag = bag
+    fun buy(ticket: Ticket): Long {
+        return bag.hold(ticket)
+    }
 }

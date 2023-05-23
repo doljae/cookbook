@@ -4,7 +4,7 @@ class TicketOffice(
     private var amount: Long,
     private var tickets: List<Ticket> = ArrayList(),
 ) {
-    fun getTicket() = tickets[0]
+    fun getTicket(): Ticket = tickets[0]
     fun minusAmount(amount: Long) {
         this.amount -= amount
     }
@@ -12,4 +12,8 @@ class TicketOffice(
     fun plusAmount(amount: Long) {
         this.amount += amount
     }
+
+//    fun sellTicketTo(audience: Audience) {
+//        plusAmount(audience.buy(ticket = getTicket()))
+//    }
 }

@@ -18,4 +18,14 @@ class Bag(
     fun plusAmount(amount: Long) {
         this.amount += amount
     }
+
+    fun hold(ticket: Ticket): Long {
+        setTicket(ticket)
+        return if (hasInvitation()) {
+            0L
+        } else {
+            minusAmount(ticket.getFee())
+            ticket.getFee()
+        }
+    }
 }
