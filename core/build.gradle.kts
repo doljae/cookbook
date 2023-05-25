@@ -12,6 +12,7 @@ configurations {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter:_")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect:_")
     implementation(Spring.boot.web)
     developmentOnly(Spring.boot.devTools)
